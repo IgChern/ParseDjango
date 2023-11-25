@@ -1,0 +1,6 @@
+api_news/celerybeat-schedule.db
+.env
+api_news/parse_app/migrations
+api_news/parse_app/__pycache__
+api_news/api_news/__pycache__
+venv
