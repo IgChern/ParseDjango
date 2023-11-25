@@ -4,3 +4,5 @@ api_news/parse_app/migrations
 api_news/parse_app/__pycache__
 api_news/api_news/__pycache__
 venv
+api_news/db.sqlite3
+api_news/djangoapi
