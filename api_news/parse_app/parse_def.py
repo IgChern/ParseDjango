@@ -14,10 +14,13 @@ def parse_request():
         dateunix = onejson_id.get('time')
         dateutc = datetime.fromtimestamp(dateunix)
         dateiso = dateutc.isoformat()
-        post = {'title': title,
-                'url': url,
-                'created': dateiso
-                }
-        if not Post.objects.filter(title=title).exists():
-            newpost = Post.objects.create(**post)
-            return newpost
+
+        if url is not None and url != '':
+
+            post = {'title': title,
+                    'url': url,
+                    'created': dateiso
+                    }
+            if not Post.objects.filter(title=title).exists():
+                newpost = Post.objects.create(**post)
+    return True

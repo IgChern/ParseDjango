@@ -6,6 +6,6 @@ from celery import shared_task
 def get_parsed():
     post = parse_request()
     if post:
-        return {'title': post.title, 'url': post.url, 'created': post.created}
+        return post
     else:
         return None
