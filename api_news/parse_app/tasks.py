@@ -9,6 +9,3 @@ def get_parsed():
         return post
     else:
         return None
-
-
-sad
