@@ -8,27 +8,27 @@ This is a Django project that parses top 30 stories from Hacker News and stores 
 
 Make sure you have Docker and Docker Compose installed on your machine.
 
-### Getting Started
+## Getting Started
 
-1. Clone the repository:
+## 1. Clone the repository:
 
     ```git clone --branch test https://github.com/IgChern/ParseDjango```
 
-2. Build and run the Docker containers:
+## 2. Build and run the Docker containers:
 
     ```docker-compose up --build```
 
-3. Make migrations:
+## 3. Make migrations:
 
     ```docker-compose run django python api_news/manage.py makemigrations```
-    
+
     ```docker-compose run django python api_news/manage.py migrate```
 
-4. Access the Django development server at:  
-[http://127.0.0.1:8000/posts/](http://127.0.0.1:8000/posts/) - Parse Hacker News Website, stored 30 items in DataBase and returns 5  
-[http://127.0.0.1:8000/posts/?offset=0&limit=10](http://127.0.0.1:8000/posts/?order=&offset=0&limit=10) - Returns data with options (offset, limit)  
-[http://127.0.0.1:8000/posts?order=title](http://127.0.0.1:8000/posts?order=title) - Returns data with order (e.x. order=title, order=-title)  
-[http://localhost:8000/posts/?order=-created&offset=0&limit=10](http://localhost:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted data with offset/limit  
+## 4. Access the Django development server at:  
+1. [http://127.0.0.1:8000/posts/](http://127.0.0.1:8000/posts/) - Parse Hacker News Website, stored 30 items in DataBase and returns 5  
+2. [http://127.0.0.1:8000/posts/?offset=0&limit=10](http://127.0.0.1:8000/posts/?order=&offset=0&limit=10) - Returns data with options (offset, limit)  
+3. [http://127.0.0.1:8000/posts?order=title](http://127.0.0.1:8000/posts?order=title) - Returns data with order (e.x. order=title, order=-title)  
+4. [http://localhost:8000/posts/?order=-created&offset=0&limit=10](http://localhost:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted data with offset/limit  
 
 5. Stop Docker containers:
 
