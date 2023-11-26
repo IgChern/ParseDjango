@@ -21,6 +21,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 3. Make migrations:
 
     ```docker-compose run django python api_news/manage.py makemigrations```
+    
     ```docker-compose run django python api_news/manage.py migrate```
 
 4. Access the Django development server at:  
@@ -34,6 +35,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
     ```docker-compose down```
 
 6. Check DataBase:
+
     ```psql -h localhost -U postgres -d postgres -p 5432```
 
 
