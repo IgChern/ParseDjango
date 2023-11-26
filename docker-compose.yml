@@ -1,29 +1,66 @@
 version: '3'
 
+
 services:
     django:
         build: .
-        command: python api_news/manage.py runserver 0.0.0.0:8000
+        command: >
+            sh -c "
+            python api_news/manage.py makemigrations &&
+            python api_news/manage.py migrate --noinput &&
+            python api_news/manage.py runserver 0.0.0.0:8000"
         volumes:
-        - .:/app/api_news
+            - .:/app/api_news
         ports:
-        - 8000:8000
-        environment:
-        - POSTGRES_NAME=postgres
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=postgres
+            - 8000:8000
         depends_on:
             - db
+        env_file:
+            - .env
+        networks:
+            - some_network
     db:
         image: postgres:13.0-alpine
         volumes:
-        - postgres_data:/var/lib/postgresql/data/
-        environment:
-        - POSTGRES_DB=postgres
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=postgres
+            - postgres_data:/var/lib/postgresql/data/
         ports:
-        - "5432:5432"
+            - "5432:5432"
+        env_file:
+            - .env
+        networks:
+            - some_network
+    celery-worker:
+        build: .
+        command: >
+            sh -c "celery -A api_news worker --loglevel=info"
+        depends_on:
+            - db
+        env_file:
+            - .env
+        networks:
+            - some_network
+    celery-beat:
+        build: .
+        command: >
+            sh -c "celery -A api_news beat --loglevel=info"
+        depends_on:
+            - db
+        env_file:
+            - .env
+        networks:
+            - some_network
+    redis:
+        image: 'redis:alpine'
+        hostname: redis
+        command: redis-server
+        networks:
+            - some_network
+        ports:
+            - '6379:6379'
+
+networks:
+    some_network:
+        driver: bridge
 
 volumes:
     postgres_data:
