@@ -6,3 +6,4 @@ api_news/api_news/__pycache__
 venv
 api_news/db.sqlite3
 api_news/djangoapi
+.DS_Store
