@@ -22,7 +22,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 1. [http://127.0.0.1:8000/posts/](http://127.0.0.1:8000/posts/) - Parse Hacker News Website, stored 30 items in DataBase and returns 5  
 2. [http://127.0.0.1:8000/posts/?offset=0&limit=10](http://127.0.0.1:8000/posts/?order=&offset=0&limit=10) - Returns data with options (offset, limit)  
 3. [http://127.0.0.1:8000/posts?order=title](http://127.0.0.1:8000/posts?order=title) - Returns data with order (e.x. order=title, order=-title)  
-4. [http://localhost:8000/posts/?order=-created&offset=0&limit=10](http://localhost:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted data with offset/limit  
+4. [http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10](http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted data with offset/limit  
 
 ### 5. Check celery tasks:
     ```docker-compose logs celery-worker```
