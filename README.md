@@ -14,7 +14,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 
 ### 2. Build and run the Docker containers:
 
-    ```docker-compose --build```
+    ```docker-compose build```
 
     ```docker-compose up -d```
 
