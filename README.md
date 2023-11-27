@@ -10,13 +10,13 @@ Make sure you have Docker and Docker Compose installed on your machine.
 
 ### 1. Clone the repository:
 
-    ```git clone https://github.com/IgChern/ParseDjango```
+    git clone https://github.com/IgChern/ParseDjango
 
 ### 2. Build and run the Docker containers:
 
-    ```docker-compose build```
+    docker-compose build
 
-    ```docker-compose up -d```
+    docker-compose up -d
 
 ### 4. Access the Django development server at:  
 1. [http://127.0.0.1:8000/posts/](http://127.0.0.1:8000/posts/) - Parse Hacker News Website, stored 30 items in DataBase and returns 5  
@@ -25,16 +25,18 @@ Make sure you have Docker and Docker Compose installed on your machine.
 4. [http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10](http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted data with offset/limit  
 
 ### 5. Check celery tasks:
-    ```docker-compose logs celery-worker```
-    ```docker-compose logs celery-beat```
+
+    docker-compose logs celery-worker
+    
+    docker-compose logs celery-beat
 
 ### 6. Check DataBase locally with password 'postgres':
 
-    ```psql -h localhost -U postgres -d postgres -p 5432```
+    psql -h localhost -U postgres -d postgres -p 5432
 
 ### 7. Stop Docker containers:
 
-    ```docker-compose down```
+    docker-compose down
 
 
 
