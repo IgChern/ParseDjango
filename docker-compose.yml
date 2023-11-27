@@ -31,7 +31,7 @@ services:
             - some_network
     celery-worker:
         build: .
-        command: sh -c "celery -A celery worker --loglevel=debug"
+        command: sh -c "celery -A celery worker --loglevel=info"
         depends_on:
             - db
         env_file:
@@ -42,7 +42,7 @@ services:
         - .:/app/api_news/api_news
     celery-beat:
         build: .
-        command: sh -c "celery -A celery beat --loglevel=debug"
+        command: sh -c "celery -A celery beat --loglevel=info"
         depends_on:
             - db
         env_file:
