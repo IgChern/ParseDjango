@@ -31,22 +31,26 @@ services:
             - some_network
     celery-worker:
         build: .
-        command: sh -c "celery -A api_news worker --loglevel=info"
+        command: sh -c "celery -A celery worker --loglevel=debug"
         depends_on:
             - db
         env_file:
             - .env
         networks:
             - some_network
+        volumes:
+        - .:/app/api_news/api_news
     celery-beat:
         build: .
-        command: sh -c "celery -A api_news beat --loglevel=info"
+        command: sh -c "celery -A celery beat --loglevel=debug"
         depends_on:
             - db
         env_file:
             - .env
         networks:
             - some_network
+        volumes:
+        - .:/app/api_news/api_news
     redis:
         image: 'redis:alpine'
         hostname: redis
