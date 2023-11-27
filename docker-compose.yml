@@ -31,8 +31,7 @@ services:
             - some_network
     celery-worker:
         build: .
-        command: >
-            sh -c "celery -A api_news worker --loglevel=info"
+        command: sh -c "celery -A api_news worker --loglevel=info"
         depends_on:
             - db
         env_file:
@@ -41,8 +40,7 @@ services:
             - some_network
     celery-beat:
         build: .
-        command: >
-            sh -c "celery -A api_news beat --loglevel=info"
+        command: sh -c "celery -A api_news beat --loglevel=info"
         depends_on:
             - db
         env_file:
