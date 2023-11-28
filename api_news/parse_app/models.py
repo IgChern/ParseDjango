@@ -4,6 +4,10 @@ from django.db import models
 
 
 class Post(models.Model):
+    '''
+    This model Post make fields for the title, URL,
+    creation post's date and database creation date.
+    '''
     title = models.CharField(max_length=255)
     url = models.URLField()
     created = models.DateTimeField()
