@@ -1,8 +1,11 @@
 # Ignore DS_Store files
 **/.DS_Store
+.DS_Store
 
 # Ignore database files
-celerybeat-schedule.db
+*celerybeat-schedule.db
+*celerybeat-schedule
+celerybeat-schedule
 dump.rdb
 *.sqlite3
 
