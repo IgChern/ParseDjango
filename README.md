@@ -1,6 +1,6 @@
-# Django Hacker News Parser
+# Django Hacker News Parser on REST Framework
 
-This is a Django project that parses with Celery top 30 stories from Hacker News and stores them in a PostgreSQL database.
+This is a Django REST Framework project that parses with Celery top 30 stories from Hacker News and stores them in a PostgreSQL database.
 
 ### Prerequisites
 
