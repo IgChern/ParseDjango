@@ -5,9 +5,10 @@
 api_news/api_news/dump.rdb
 api_news/celerybeat-schedule
 api_news/celerybeat-schedule.db
-**/db.sqlite3/
+db.sqlite3
 celerybeat-schedule
 **/dump.rdb
+api_news/db.sqlite3
 
 # Ignore migration files
 **/migrations/
