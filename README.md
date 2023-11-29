@@ -10,7 +10,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 
 ### 1. Clone the repository:
 
-    git clone https://github.com/IgChern/ParseDjango
+    git clone https://github.com/IgChern/ParseDjango/tree/rest
 
 ### 2. Change directory:
 
@@ -34,10 +34,10 @@ Make sure you have Docker and Docker Compose installed on your machine.
     docker-compose up
 
 ### 5. Access the Django development server at:  
-1. [http://127.0.0.1:8000/posts/](http://127.0.0.1:8000/posts/) - Returns last 5 stories from database 
-2. [http://127.0.0.1:8000/posts/?offset=0&limit=10](http://127.0.0.1:8000/posts/?order=&offset=0&limit=10) - Returns stories with options (offset, limit)  
-3. [http://127.0.0.1:8000/posts?order=title](http://127.0.0.1:8000/posts?order=title) - Returns stories with order (e.x. order=title, order=-title)  
-4. [http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10](http://127.0.0.1:8000/posts/?order=-created&offset=0&limit=10) - Returns sorted stories with order, offset and limit  
+1. [http://127.0.0.1:8000/api/posts/](http://127.0.0.1:8000/api/posts/) - Returns last 5 stories from database 
+2. [http://127.0.0.1:8000/api/posts/?offset=0&limit=10](http://127.0.0.1:8000/api/posts/?order=&offset=0&limit=10) - Returns stories with options (offset, limit)  
+3. [http://127.0.0.1:8000/api/posts?order=title](http://127.0.0.1:8000/api/posts?order=title) - Returns stories with order (e.x. order=title, order=-title)  
+4. [http://127.0.0.1:8000/api/posts/?order=-created&offset=0&limit=10](http://127.0.0.1:8000/api/posts/?order=-created&offset=0&limit=10) - Returns sorted stories with order, offset and limit  
 
 ### 6. Check celery tasks:
 
