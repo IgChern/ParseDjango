@@ -11,7 +11,7 @@ class CustomPag(LimitOffsetPagination):
     def get_limit(self, request):
         '''
         Change limit parameter by default = 5 if the limit is None or
-        limit > 30 or limit <= 30.
+        limit > 30 or limit <= 0.
         '''
         limit = super().get_limit(request)
         if limit is None or limit > 30 or limit <= 0:
