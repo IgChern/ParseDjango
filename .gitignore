@@ -2,12 +2,12 @@
 **/.DS_Store
 .DS_Store
 
-# Ignore database files
-*celerybeat-schedule.db
-*celerybeat-schedule
+api_news/api_news/dump.rdb
+api_news/celerybeat-schedule
+api_news/celerybeat-schedule.db
+**/db.sqlite3/
 celerybeat-schedule
-dump.rdb
-*.sqlite3
+**/dump.rdb
 
 # Ignore migration files
 **/migrations/
