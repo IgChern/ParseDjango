@@ -3,6 +3,9 @@ from parse_app.models import Post
 
 
 class CustomOrderingFilter(OrderingFilter):
+    '''
+    Make custom ordering class, which provide direction and order in function
+    '''
 
     # Check the direction
     def filter_queryset(self, request, queryset, view):
