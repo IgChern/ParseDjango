@@ -37,7 +37,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 1. [http://127.0.0.1:8000/api/posts/](http://127.0.0.1:8000/api/posts/) - Returns last 5 stories from database 
 2. [http://127.0.0.1:8000/api/posts/?offset=0&limit=10](http://127.0.0.1:8000/api/posts/?order=&offset=0&limit=10) - Returns stories with options (offset, limit)  
 3. [http://127.0.0.1:8000/api/posts?order=title](http://127.0.0.1:8000/api/posts?order=title) - Returns stories with order (e.x. order=title, order=-title)  
-4. [http://127.0.0.1:8000/api/posts/?order=-created&offset=0&limit=10](http://127.0.0.1:8000/api/posts/?order=-created&offset=0&limit=10) - Returns sorted stories with order, offset and limit  
+4. [http://127.0.0.1:8000/api/posts/?ordering=title&offset=0&limit=10](http://127.0.0.1:8000/api/posts/?ordering=title&offset=0&limit=10) - Returns sorted stories with order, offset and limit  
 
 ### 6. Check celery tasks:
 

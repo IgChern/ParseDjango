@@ -20,7 +20,7 @@ class CustomPag(LimitOffsetPagination):
 
     def get_offset(self, request):
         '''
-        Change offset parameter by default = 0 if the offset in None or
+        Change offset parameter by default = 0 if the offset is None or
         offset < 0.
         '''
         offset = super().get_offset(request)
